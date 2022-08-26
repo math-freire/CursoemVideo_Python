@@ -1,2 +1,2 @@
-name = input('Enter your name: ')
-print('Is there Silva in your name: {}'.format('Silva' in name))
+name = input('Enter your name: ').strip().lower()
+print('Is there Silva in your name: {}'.format('silva' in name))
