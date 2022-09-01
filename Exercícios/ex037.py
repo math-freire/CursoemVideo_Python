@@ -41,7 +41,10 @@ key = int(input('1 - Binary, 2 - octal, 3 hexadecimal\n'))
 
 if key == 1:
     print('->', dec2any(number, 2))
+    # or bin(number)[2:]
 elif key == 2:
     print('->', dec2any(number, 8))
+    # or oct(number)[2:]
 else:
-    print('->', hex(number))
+    print('->', dec2any(number, 16))
+    # or hex(number)[2:]
