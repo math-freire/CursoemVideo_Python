@@ -25,3 +25,5 @@ elif choice == pc_choice:
     print('Draw')
 else:
     print('You lost')
+
+# Nice :)
