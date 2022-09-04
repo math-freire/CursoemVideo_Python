@@ -9,6 +9,6 @@ elif 18.5 <= imc < 25:
 elif 25 <= imc < 30:
     print('Calm down... um pouco acima')
 elif 30 <= imc < 40:
-    print('Dude... you are a little fat (obesity')
+    print('Dude... you are a little fat (obesity)')
 else:
     print('You are a large individual (over fat)')

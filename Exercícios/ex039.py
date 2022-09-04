@@ -1,5 +1,5 @@
 import datetime
-
+# atual = date.today().year retornará o ano
 y = int(input('Age: '))
 
 date = datetime.date.today()  # Dia atual

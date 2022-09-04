@@ -1,4 +1,5 @@
 age = int(input('Age: '))
+# Com datetime poderia buscar a partir do ano de nascimento, invés da idade
 
 if age <= 9:
     print("Categoria Mirim")

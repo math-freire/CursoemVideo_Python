@@ -9,15 +9,17 @@ print('JO')
 time.sleep(0.5)
 print('KEN')
 time.sleep(0.5)
-print('PO\n')
+print('PO')
 time.sleep(0.5)
 
+print('=-'*15)
 if pc_choice == 1:
-    print('PC escolheu Pedra!\n')
+    print('PC escolheu Pedra!')
 elif pc_choice == 2:
-    print('PC escolheu Papel!\n')
+    print('PC escolheu Papel!')
 elif pc_choice == 3:
-    print('PC escolheu Tesoura!\n')
+    print('PC escolheu Tesoura!')
+print('=-'*15)
 
 if choice == 1 and pc_choice == 3 or choice == 2 and pc_choice == 1 or choice == 3 and pc_choice == 2:
     print('You won')
