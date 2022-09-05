@@ -1,11 +1,16 @@
 n = int(input('Enter a number: '))
+total = 0
 
-key = 0
-for i in range(2, n):
+for i in range(1, n+1):
     if n % i == 0:
-        print("It's not a prime number!")
-        key = -1
-        break
+        print('\033[93m', end='')
+        total += 1
+    else:
+        print('\033[36m', end='')
+    print('{} '.format(i), end='')
+print('\n\033[0mThe number {} was divided {} times.'.format(n, total), end=' ')
 
-if key == 0:
-    print("It's a prime number!")
+if total == 2:
+    print("So it \033[92mis a prime number\033[0m!")
+else:
+    print("So it \033[91misn't a prime number\033[0m!")
