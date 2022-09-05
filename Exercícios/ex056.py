@@ -1,4 +1,4 @@
-names, ageM, sexM, ages = [], [], [], []
+names, ageM, ages = [], [], []
 under20w = 0
 
 totalPeople = int(input('How many people: '))
@@ -14,7 +14,6 @@ for i in range(0, totalPeople):
 
     elif sex == 'M':
         names.append(name)
-        sexM.append(sex)
         ageM.append(age)
 
 # Age average
@@ -32,4 +31,3 @@ olderManName = names[olderIndex]
 print('The \033[91maverage age\033[0m for the mentioned group is \033[91m{}\033[0m, \033[93m{}\033[0m women have '
       '\033[93mless than 20 years old\033[0m and \033[94m{}\033[0m is the \033[94moldest man\033[0m with \033[94m{} '
       'years old\033[0m.'.format(averageAge, under20w, olderManName, older))
-
