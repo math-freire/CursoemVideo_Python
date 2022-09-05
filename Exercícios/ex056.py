@@ -17,10 +17,7 @@ for i in range(0, totalPeople):
         ageM.append(age)
 
 # Age average
-averageAge, sumAge = 0, 0
-for someAge in ages:
-    sumAge += someAge
-averageAge = sumAge // totalPeople
+averageAge = sum(ages) // totalPeople
 
 # Older man
 older = max(ageM)
