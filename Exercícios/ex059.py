@@ -20,7 +20,7 @@ print('\033[1;32m=-\033[0m' * 10)
 
 key = None
 result = None
-while key != 0:
+while key != 5:
     menu()
     key = int(input('\033[1;32mOption: \033[0m'))
     print('\033[1;32m', end='')  # Green
@@ -38,7 +38,6 @@ while key != 0:
         n2 = float(input('Number 2: \033[0m'))
     elif key == 5:
         print('Thank you for using our services!')
-        sys.exit()
     else:
         print('\033[31mPlease enter a valid input.\033[0m')
     sleep(1)
