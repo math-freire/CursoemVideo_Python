@@ -1,5 +1,5 @@
 entry = None
-count, soma = 0, 0
+count = soma = 0
 while entry != 999:
     entry = int(input('Enter a number: '))
     if entry != 999:
