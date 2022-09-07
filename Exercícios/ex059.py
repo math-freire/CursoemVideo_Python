@@ -1,4 +1,5 @@
 import sys
+from time import sleep
 
 
 def menu():
@@ -40,3 +41,4 @@ while key != 0:
         sys.exit()
     else:
         print('\033[31mPlease enter a valid input.\033[0m')
+    sleep(1)
