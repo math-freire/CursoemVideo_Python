@@ -3,7 +3,6 @@ print('\033[31mREGISTRATION PROGRAM')
 print('Enter age 0 to end the program.\033[m')
 print('='*30)
 
-
 plus18 = men = under20w = 0
 while True:
     while True:
