@@ -23,7 +23,7 @@ while True:
         break
 
     total += price
-    if total > 1000:
+    if price > 1000:
         plus1k += 1
     if cheaper_price is None:
         cheaper_name = name
