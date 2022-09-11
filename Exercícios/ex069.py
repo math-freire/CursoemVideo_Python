@@ -15,7 +15,7 @@ while True:
         break
     while True:
         sex = input('Sex [M/F]: ').strip().upper()
-        if sex != 'M' and sex != 'F':
+        if sex not in 'MF':
             print('\033[31mInvalid input.\033[m')
         else:
             break
