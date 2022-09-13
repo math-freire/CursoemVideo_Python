@@ -11,7 +11,11 @@ for i in range(-4, 0):
     print(f'{scoreboard[i]}, ' if i < -1 else f'{scoreboard[i]}.\n', end='')
 
 print('\033[33mOrdem alfabética: \033[m', end='')
-print(sorted(scoreboard))
+for flag, time in enumerate(sorted(scoreboard)):
+    if flag == len(scoreboard)-1:
+        print(f'{time}.')
+    else:
+        print(time, end=', ')
 
 print('\033[34mPosição do Red Bull Bragantino: \033[m', end='')
 print(scoreboard.index('Red Bull Bragantino'))
