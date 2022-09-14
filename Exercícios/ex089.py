@@ -19,6 +19,7 @@ while True:
         flag = input('\033[31mEntrada incorreta.\nContinuar [S/N]? \033[m')
     if flag in 'Nn': break
 
+print(boletim)
 print('-='*35)
 print(f"{'No.':<5}{'NOME':<15}{'MEDIA':>10}")
 print('_'*35)
@@ -36,5 +37,5 @@ while True:
             break
         except IndexError:
             print('\033[31mPor favor, digite um valor válido!\033[m')
-            a = int(input('\033[31m[-1 encerra]\033[m Mostrar notas de qual aluno? '))
+            a = int(input('\033[31m[999 encerra]\033[m Mostrar notas de qual aluno? '))
     print('_'*35)
