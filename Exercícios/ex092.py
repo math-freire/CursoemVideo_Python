@@ -12,12 +12,13 @@ else:
     pessoa['contratacao'] = int(input('Ano de contratação: '))
     pessoa['salario'] = float(input('Salário: '))
     pessoa['aposentadoria'] = 35 - (ano - pessoa['contratacao']) + pessoa['idade']
-
-print('\033[1;31-'*20, '\033[m')
-print(f"""Nome: {pessoa['nome']}
+    print(f"""Nome: {pessoa['nome']}
 Idade: {pessoa['idade']}
 CTPS: {pessoa['CTPS']}
 Data de contratação: {pessoa['contratacao']}
 Salário: {pessoa['salario']}
 Idade de aposentadoria: {pessoa['aposentadoria']}""")
+
+print('\033[1;31m-'*20, '\033[m')
+
 
