@@ -18,3 +18,13 @@ def end_program():
     time.sleep(1)
 
 
+def start_red():
+    print('\033[1;31m', end='')
+
+
+def start_yellow():
+    print('\033[1;33m', end='')
+
+
+def end_color():
+    print('\033[m', end='')
