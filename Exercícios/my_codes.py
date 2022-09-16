@@ -10,21 +10,21 @@ def titulo(st, x):
 def end_program():
     print()
     time.sleep(1)
-    start_red()
+    red()
     time.sleep(.5)
     print(f"{'SHUTTING DOWN':-^40}")
     time.sleep(.5)
-    end_color()
+    endc()
     time.sleep(1)
 
 
-def start_red():
-    print('\033[1;31m', end='')
+def red():
+    return '\033[1;31m'
 
 
-def start_yellow():
-    print('\033[1;33m', end='')
+def yellow():
+    return '\033[1;33m'
 
 
-def end_color():
-    print('\033[m', end='')
+def endc():
+    return '\033[m'
