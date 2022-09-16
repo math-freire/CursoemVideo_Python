@@ -10,11 +10,11 @@ def titulo(st, x):
 def end_program():
     print()
     time.sleep(1)
-    print('\033[1;33m-' * 40)
+    start_red()
     time.sleep(.5)
     print(f"{'SHUTTING DOWN':-^40}")
     time.sleep(.5)
-    print('-' * 40, '\033[m')
+    end_color()
     time.sleep(1)
 
 
