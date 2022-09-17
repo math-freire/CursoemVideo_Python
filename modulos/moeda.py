@@ -1,7 +1,18 @@
-from Exercícios import my_codes
+from Exercicios import my_codes
 
 
-def aumentar(x, show=True):
+def moeda(x, show=False):
+    """
+    Retorna o número em formatação contábil
+    param x: Valor a ser formatado
+    return: Valor formatado
+    param show: False para somente retornar e True para imprimir
+    """
+    if show:
+        print(f'R${x:.2f}')
+    return f'R${x:.2f}'
+
+def aumentar(x, show=False):
     """
     Retorna o valor passado acrescido pelo percentual desejado
     param x: Valor base
@@ -14,7 +25,7 @@ def aumentar(x, show=True):
     return x * (1 + (y / 100))
 
 
-def diminuir(x, show=True):
+def diminuir(x, show=False):
     """
     Retorna o valor passado diminuído pelo percentual desejado
     param x: Valor base
@@ -27,7 +38,7 @@ def diminuir(x, show=True):
     return x * (1 - (y / 100))
 
 
-def metade(x, show=True):
+def metade(x, show=False):
     """
     Retorna a metade do valor informado
     param x: Valor inicial passado pelo usuário
@@ -39,7 +50,7 @@ def metade(x, show=True):
     return x / 2
 
 
-def dobro(x, show=True):
+def dobro(x, show=False):
     """
     Retorna o dobro do valor informado
     param x: Valor inicial passado pelo usuário
