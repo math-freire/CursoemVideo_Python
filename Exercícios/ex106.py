@@ -6,8 +6,8 @@ def my_help():
     while True:
         sleep(.5)
         print(f'{red()}To end the program, type "END".{endc()}')
-        func = input(f'{red()}Function or Library ➤➤➤ {endc()}')
-        if func.upper() == 'END':
+        func = input(f'{red()}Function or Library ➤➤➤ {endc()}').strip()
+        if func.upper().strip() == 'END':
             break
         titulo(f'HELP MANUAL FOR {func.upper()}', (len(f'HELP MANUAL FOR {func.upper()}')+6))
         sleep(1.5)
