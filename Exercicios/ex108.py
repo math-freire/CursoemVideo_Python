@@ -1,7 +1,7 @@
 from modulos import moeda
 import my_codes
 
-my_codes.titulo('MODULARIZAÇÃO', 30)
+my_codes.titulo('MODULARIZAÇÃO - FORMATAÇÃO MOEDA', 50)
 p = my_codes.r_float('Digite o preço (R$): ')
 moeda.dobro(p, show=True)
 moeda.metade(p, show=True)
