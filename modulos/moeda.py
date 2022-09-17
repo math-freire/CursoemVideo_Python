@@ -12,77 +12,72 @@ def moeda(x, show=False):
         print(f'R${x:.2f}')
     return f'R${x:.2f}'
 
-def aumentar(x, show=False):
+
+def aumentar(x, show=False, f=False):
     """
-    Retorna o valor passado acrescido pelo percentual desejado
+    Retorna o valor passado acrescido pelo percentual desejado. Se todos os parâmetros opcionais forem False, a função
+    retorna somente o resultado da operação (float)
     param x: Valor base
-    param show: True para printar o valor de acréscimo e False para somente retornar o resultado
+    param show: True para printar o valor de acréscimo e False para somente retornar o resultado (já formatado)
+    param f: True para retornar o valor literal formatado em contábil
     return: Total atualizado
     """
     y = my_codes.r_float('Digite o percentual de acréscimo: ')
     if show:
-        print(f'{my_codes.yellow()}Aumentando o valor de {x} por {y}% temos {x * (1 + (y / 100))}{my_codes.endc()}')
-    return x * (1 + (y / 100))
+        print(f'{my_codes.yellow()}Aumentando o valor de {moeda(x)} por {y}% temos {moeda(x * (1 + (y / 100)))}'
+              f'{my_codes.endc()}')
+    if f:
+        return f'{moeda(x * (1 + (y / 100)))}'
+    else:
+        return x * (1 + (y / 100))
 
 
-def diminuir(x, show=False):
+def diminuir(x, show=False, f=False):
     """
-    Retorna o valor passado diminuído pelo percentual desejado
+    Retorna o valor passado diminuído pelo percentual desejado. Se todos os parâmetros opcionais forem False, a função
+    retorna somente o resultado da operação (float)
     param x: Valor base
-    param show: True para printar o valor de acréscimo e False para somente retornar o resultado
+    param show: True para printar o valor de acréscimo e False para somente retornar o resultado (já formatado)
+    param f: True para retornar o valor literal formatado em contábil
     return: Total atualizado
     """
     y = my_codes.r_float('Digite o percentual de decréscimo: ')
     if show:
-        print(f'{my_codes.yellow()}Diminuindo o valor de {x} por {y}% temos {(x * (1 - (y / 100)))}{my_codes.endc()}')
-    return x * (1 - (y / 100))
+        print(f'{my_codes.yellow()}Diminuindo o valor de {moeda(x)} por {y}% temos {moeda((x * (1 - (y / 100))))}'
+              f'{my_codes.endc()}')
+    if f:
+        return f'{moeda(x * (1 - (y / 100)))}'
+    else:
+        return x * (1 - (y / 100))
 
 
-def metade(x, show=False):
+def metade(x, show=False, f=False):
     """
     Retorna a metade do valor informado
     param x: Valor inicial passado pelo usuário
-    param show: True para printar o valor de acréscimo e False para somente retornar o resultado
+    param show: True para printar o valor de acréscimo e False para somente retornar o resultado (já formatado)
+    param f: True para retornar o valor literal formatado em contábil
     return: Metade do valor passado na variável x
     """
     if show:
-        print(f'{my_codes.yellow()}A metade de {x} é {x/2}{my_codes.endc()}')
-    return x / 2
+        print(f'{my_codes.yellow()}A metade de {moeda(x)} é {moeda(x/2)}{my_codes.endc()}')
+    if f:
+        return f'{moeda(x/2)}'
+    else:
+        return x / 2
 
 
-def dobro(x, show=False):
+def dobro(x, show=False, f=False):
     """
     Retorna o dobro do valor informado
     param x: Valor inicial passado pelo usuário
-    param show: True para printar o valor de acréscimo e False para somente retornar o resultado
+    param show: True para printar o valor de acréscimo e False para somente retornar o resultado (já formatado)
+    param f: True para retornar o valor literal formatado em contábil
     return: Dobro do valor passado na variável x
     """
     if show:
-        print(f'{my_codes.yellow()}O dobro de {x} é {x*2}{my_codes.endc()}')
-    return x * 2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        print(f'{my_codes.yellow()}O dobro de {x} é {x * 2}{my_codes.endc()}')
+    if f:
+        return f'{moeda(x*2)}'
+    else:
+        return x * 2
