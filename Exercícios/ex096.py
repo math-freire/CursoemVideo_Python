@@ -7,7 +7,7 @@ def area(x, y):
 
 
 my_codes.titulo('FUNÇÃO PARA CALCULAR ÁREA', 30)
-x = float(input('Enter the lenght: '))
-y = float(input('Enter the width: '))
+x = float(input('Enter the lenght (m): '))
+y = float(input('Enter the width (m): '))
 area(x, y)
 my_codes.end_program()

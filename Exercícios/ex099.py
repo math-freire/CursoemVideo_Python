@@ -5,9 +5,9 @@ import my_codes
 
 def maior(*num):
     numbers = num
-    my_codes.start_red()
+    my_codes.red()
     print('Analyzing...')
-    my_codes.end_color()
+    my_codes.endc()
     sleep(.2)
     print('You entered: ', end='')
     for number in numbers: print(f'{number} ', end='')
