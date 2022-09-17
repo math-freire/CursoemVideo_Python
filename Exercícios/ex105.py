@@ -2,6 +2,12 @@ from my_codes import titulo, end_program
 
 
 def grade(*grades, sit=False):
+    """
+    Returns a student's grade dictionary containing the total of entries, the greatest, the lowest and the mediam.
+    param grades: Many grades as user may want
+    param sit: False by default. True for showing if the student is approved (mediam > 4) or held back
+    return: Dictionary containing all the information.
+    """
     grades_total = len(grades)
     grades_max = max(grades)
     grades_min = min(grades)
