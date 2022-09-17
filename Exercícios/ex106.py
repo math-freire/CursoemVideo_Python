@@ -11,15 +11,9 @@ def my_help():
             break
         titulo(f'HELP MANUAL FOR {func.upper()}', (len(f'HELP MANUAL FOR {func.upper()}')+6))
         sleep(1.5)
-        while True:
-            try:
-                print('\033[32m', end='')
-                help(func)
-                print('\033[m', end='')
-                break
-            except NameError:
-                print(f'{red()}This is not a valid function or library, please, try again!{endc()}')
-                break
+        print('\033[32m', end='')
+        help(func)
+        print('\033[m', end='')
 
 
 titulo('HELP PROGRAM FUNCTION', 50)
