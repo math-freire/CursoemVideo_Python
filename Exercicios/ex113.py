@@ -31,3 +31,5 @@ f = r_float('Float: ')
 print('Teste')
 print(f'The integer number is {i}')
 print(f'The float number is {f}')
+
+end_program()
