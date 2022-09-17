@@ -3,9 +3,9 @@ from my_codes import titulo, end_program
 def fatorial(n, process=False):
     """
     Prints the results of n! (n factorial) and has no return.
-    :param n: Number for factorial calculation;
-    :param process: True for printing the calculation and False to show only the result. It's False by default;
-    :return: None.
+    param n: Number for factorial calculation;
+    param process: True for printing the calculation and False to show only the result. It's False by default;
+    return: None.
     """
 
     if process is True:
