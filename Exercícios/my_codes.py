@@ -28,3 +28,21 @@ def green():
 
 def endc():
     return '\033[m'
+
+
+def r_int():
+    while True:
+        try:
+            x = int(input('Enter an integer: '))
+            break
+        except ValueError:
+            print(f'{red()}Invalid input! Please, enter an integer value.{endc()}')
+
+
+def r_float():
+    while True:
+        try:
+            x = int(input('Enter a number: '))
+            break
+        except ValueError:
+            print(f'{red()}Invalid input! Please, enter a number.{endc()}')

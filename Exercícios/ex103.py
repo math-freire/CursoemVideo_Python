@@ -1,7 +1,7 @@
 from my_codes import titulo, end_program
 
 
-def ficha(nome='<desconhecido>', gols='<não informado>'):
+def ficha(nome='<desconhecido>', gols=0):
     print(f'O jogador {nome} fez {gols} gol(s) no campeonato.')
 
 

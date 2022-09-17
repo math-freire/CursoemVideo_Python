@@ -8,16 +8,9 @@ def grade(*grades, sit=False):
     param sit: False by default. True for showing if the student is approved (mediam > 4) or held back
     return: Dictionary containing all the information.
     """
-    grades_total = len(grades)
-    grades_max = max(grades)
-    grades_min = min(grades)
-    grades_median = (sum(grades) / grades_total)
-    student = {'total': grades_total,
-               'top': grades_max,
-               'bottom': grades_min,
-               'median': grades_median}
+    student = {'total': len(grades), 'top': max(grades), 'bottom': min(grades), 'median': (sum(grades) / len(grades))}
     if sit:
-        if grades_median > 4:
+        if student['total'] > 4:
             student['situation'] = 'Approved'
         else:
             student['situation'] = 'Held Back'
