@@ -43,7 +43,7 @@ def r_int(frase='Enter an integer: '):
 def r_float(frase='Enter a number: '):
     while True:
         try:
-            x = int(input(frase))
+            x = float(input(frase))
             break
         except ValueError:
             print(f'{red()}Invalid input! Please, enter a number.{endc()}')
