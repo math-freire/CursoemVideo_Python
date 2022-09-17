@@ -11,6 +11,7 @@ def leiaint():
     return n
 
 
+titulo('VALIDA INT', 20)
 n = leiaint()
 print(f'O número inteiro digitado foi {n}.')
-
+end_program()
