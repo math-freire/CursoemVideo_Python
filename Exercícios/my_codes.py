@@ -30,19 +30,20 @@ def endc():
     return '\033[m'
 
 
-def r_int():
+def r_int(frase='Enter an integer: '):
     while True:
         try:
-            x = int(input('Enter an integer: '))
+            x = int(input(frase))
             break
         except ValueError:
             print(f'{red()}Invalid input! Please, enter an integer value.{endc()}')
+    return x
 
-
-def r_float():
+def r_float(frase='Enter a number: '):
     while True:
         try:
-            x = int(input('Enter a number: '))
+            x = int(input(frase))
             break
         except ValueError:
             print(f'{red()}Invalid input! Please, enter a number.{endc()}')
+    return x
