@@ -1,4 +1,4 @@
-from modulos import moeda
+from utilidadesCeV import moeda
 import my_codes
 
 my_codes.titulo('MODULARIZAÇÃO - INICIO', 50)
