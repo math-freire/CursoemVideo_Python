@@ -46,3 +46,4 @@ def criar_cadastro():
         print(f'{green()}Cadastrando {nome}...{endc()}')
         sleep(1)
         print(f'{green()}Cadastro de {nome} efetuado com sucesso!{endc()}')
+
