@@ -18,3 +18,25 @@ def menu():
         except ValueError:
             print(f'{red()}Entrada inválida! Favor digitar uma opção válida!{endc()}')
     return x
+
+
+def ler_cadastro():
+    print('-' * 40)
+    print('PESSOAS CADASTRADAS'.center(40))
+    print('-' * 40)
+    with open('cadastro.txt', 'r') as arquivo:
+        teste = arquivo.readlines()
+    for linha in teste:
+        nome, idade = linha.strip().split(',')
+        print(f'{nome:30}{idade} anos')
+
+
+def criar_cadastro():
+    print('-' * 40)
+    print('NOVO CADASTRO'.center(40))
+    print('-' * 40)
+    with open('cadastro.txt', 'a') as arquivo:
+        nome = input('Digite o novo nome: ')
+        idade = my_codes.r_int('Digite a idade: ')
+        arquivo.write(f'\n{nome}, {idade}')
+        print(f'{green()}Cadastro de {nome} efetuado com sucesso!{endc()}')
