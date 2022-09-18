@@ -1,12 +1,14 @@
 from Exercicios import my_codes
 from Exercicios.my_codes import yellow, endc, red, green
+from time import sleep
 
 
-def menu():
+def menu(lista):
     my_codes.titulo('MENU PRINCIPAL', 40)
-    print(f'{yellow()}1 - {green()}Ver pessoas cadastradas{endc()}')
-    print(f'{yellow()}2 - {green()}Cadastrar novas pessoas{endc()}')
-    print(f'{yellow()}3 - {green()}Sair do sistema{endc()}')
+    c = 1
+    for item in lista:
+        print(f'{yellow()}{c} - {green()}{item}{endc()}')
+        c += 1
     print(f'{yellow()}-' * 40, f'{endc()}')
     while True:
         try:
@@ -27,6 +29,7 @@ def ler_cadastro():
     with open('cadastro.txt', 'r') as arquivo:
         teste = arquivo.readlines()
     for linha in teste:
+        sleep(.3)
         nome, idade = linha.strip().split(',')
         print(f'{nome:30}{idade} anos')
 
@@ -39,4 +42,7 @@ def criar_cadastro():
         nome = input('Digite o novo nome: ')
         idade = my_codes.r_int('Digite a idade: ')
         arquivo.write(f'\n{nome}, {idade}')
+        sleep(.2)
+        print(f'{green()}Cadastrando {nome}...{endc()}')
+        sleep(1)
         print(f'{green()}Cadastro de {nome} efetuado com sucesso!{endc()}')
